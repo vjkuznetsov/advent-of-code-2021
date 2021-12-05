@@ -1,7 +1,7 @@
 # https://adventofcode.com/2021/day/1
 
 def read_input():
-    with open('day1input.txt', 'r') as file:
+    with open('./inputs/day1.txt', 'r') as file:
         seq = tuple(map(int, file.read().strip().split('\n')))
         return seq
 
