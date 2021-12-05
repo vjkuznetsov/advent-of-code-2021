@@ -5,19 +5,12 @@ def read_input():
         seq = tuple(map(int, file.read().strip().split('\n')))
         return seq
 
-def solution_part_one():
+def solution(k):
     seq, s = read_input(), 0
-    for i in range(1, len(seq)):
-        if seq[i] > seq[i-1]:
+    for i in range(k, len(seq)):
+        if seq[i] > seq[i-k]:
             s += 1
     return s
 
-def solution_part_two():
-    seq, s = read_input(), 0
-    for i in range(3, len(seq)):
-        if seq[i] > seq[i-3]:
-            s += 1
-    return s
-
-print(solution_part_one())
-print(solution_part_two())
+print(solution(k=1))
+print(solution(k=3))
